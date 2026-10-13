@@ -22,7 +22,7 @@ def show_quotes(quotes):
         print(f'[{q["id"]}] "{q["quote"]}"')
 
 
-
+#prints a list of books
 def show_books(books):
     for b in books:
         author = b["author"]
@@ -35,6 +35,9 @@ def show_books(books):
 
 
 last_quote = None
+
+
+#User menu and main loop
 print("Welcome to Using The Dune API!")
 
 while True:
@@ -47,6 +50,9 @@ while True:
     print("7. Save last quote")
     print("8. Quit")
     choice = input("Choose an option: ").strip()
+
+
+
 
     if choice == "1":
         quotes = get_data("/quotes")
@@ -109,6 +115,7 @@ while True:
     elif choice == "8":
         print("Goodbye!")
         break
+
 
     else:
         print("Please choose a number from 1 to 8.")
